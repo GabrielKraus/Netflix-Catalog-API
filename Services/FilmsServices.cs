@@ -55,4 +55,5 @@ public interface IFilmsServices
     IEnumerable<Films> Get();
     Task Save(Films film);
     Task Update(Guid id, Films film);
+    Task Delete(Guid id);
 }
