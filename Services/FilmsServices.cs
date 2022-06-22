@@ -38,6 +38,17 @@ public class FilmsServices: IFilmsServices
             await context.SaveChangesAsync();
         }
     }
+    public async Task Delete(Guid id)
+    {
+        var filmActual = context.Films.Find(id);
+
+        if (filmActual != null)
+        {
+            context.Remove(filmActual);
+
+            await context.SaveChangesAsync();
+        }
+    }
 }
 public interface IFilmsServices
 {
