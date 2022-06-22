@@ -3,7 +3,6 @@ using Netflix_Catalog_API.Services;
 
 namespace Netflix_Catalog_API.Controllers;
 
-[ApiController]
 [Route("api/genres")]
 public class GenresController : ControllerBase
 {
