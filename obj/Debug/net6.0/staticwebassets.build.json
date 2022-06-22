@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "DSFwCa6IM60qdKc+nQlU10za3M7VNCtEg/Ol9YBUvhE=",
+  "Source": "Netflix-Catalog-API",
+  "BasePath": "_content/Netflix-Catalog-API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
