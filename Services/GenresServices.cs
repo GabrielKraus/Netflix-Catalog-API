@@ -13,8 +13,37 @@ public class GenresServices: IGenresServices
     {
         return context.Genres;
     }
+
+    public async Task Save(Genres genre)
+    {
+        context.Add(genre);
+        await context.SaveChangesAsync();
+    }
+    public async Task Update(Guid id, Genres genre)
+    {
+        var genreActual = context.Genres.Find(id);
+
+        if(genreActual != null)
+        {
+            genreActual.Genre = genre.Genre;
+            await context.SaveChangesAsync();
+        }
+    }
+    public async Task Delete(Guid id)
+    {
+        var genreActual = context.Genres.Find(id);
+
+        if(genreActual != null)
+        {
+            context.Remove(genreActual);
+            await context.SaveChangesAsync();
+        }
+    }
 }
 public interface IGenresServices
 {
     IEnumerable<Genres> Get();
+    Task Save(Genres genre);
+    Task Update(Guid id, Genres genre);
+    Task Delete(Guid id);
 }
