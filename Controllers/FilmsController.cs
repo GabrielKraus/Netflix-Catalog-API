@@ -31,4 +31,11 @@ public class FilmsController : ControllerBase
         filmsService.Update(id, film);
         return Ok();
     }
+
+    [HttpDelete("{id}")]
+    public IActionResult Delete(Guid id)
+    {
+        filmsService.Delete(id);
+        return Ok();
+    }
 }
