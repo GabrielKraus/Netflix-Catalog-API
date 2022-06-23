@@ -34,6 +34,8 @@ public class FilmsContext: DbContext
             GenreId = Guid.Parse("3c2d0c12-612d-443e-a69d-77f2e0db1f39"), 
             Title = "Mi novia Polly", 
             Picture = "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/9290b804c6794110c584a62ade71e39c8247d120473d92cc8b36ccf4f52fca8e._RI_V_TTW_.jpg",
+            BrandLogo = "https://occ-0-2416-420.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABQ3oIQkJZ2dZzuVRpPJGvlNgivCCdIyHy74pGmMJJtRXU3lS585qTOYAeK3KAhskqx3R9jyyGOn2xS3rGG-GAped1gCvE7V0R8ue2WhDA-k.webp?r=1af",
+            BackgroundPic = "https://occ-0-2416-420.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABULmRYiVPxrNT7M32nwJGjwI6krkX0OfOQDCWgC8C6dE6tAaqmDl7T4ODjTmm23l7Cfsdep4yBUbMEtaGMCjzi38IHcuLTc05yFE.webp?r=525",
             Description = "Después de ser abandonado por su esposa en la luna de miel, el mojigato Reuben se reencuentra con una irreverente amiga de la infancia que le enseña a vivir al límite.", 
             ClassType= ClassType.Movie, 
             Duration = "1:30", 
@@ -52,6 +54,8 @@ public class FilmsContext: DbContext
             film.HasOne(p=> p.Genres).WithMany(p=> p.Films).HasForeignKey(p=> p.GenreId);
             film.Property(p=> p.Title);
             film.Property(p=> p.Picture);
+            film.Property(p=> p.BrandLogo);
+            film.Property(p=> p.BackgroundPic);
             film.Property(p=> p.Description);
             film.Property(p=> p.ClassType);
             film.Property(p=> p.Duration);

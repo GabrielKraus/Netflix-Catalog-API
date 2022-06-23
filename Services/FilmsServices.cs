@@ -27,6 +27,8 @@ public class FilmsServices: IFilmsServices
             filmActual.GenreId = film.GenreId;
             filmActual.Title = film.Title;
             filmActual.Picture = film.Picture;
+            filmActual.BrandLogo = film.BrandLogo;
+            filmActual.BackgroundPic = film.BackgroundPic;
             filmActual.Description = film.Description;
             filmActual.ClassType = film.ClassType;
             filmActual.Duration = film.Duration;
