@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using Netflix_Catalog_API;
 using Netflix_Catalog_API.Services;
 
@@ -10,6 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddDbContext<FilmsContext>(p => p.UseInMemoryDatabase("FilmsDB"));
 builder.Services.AddSqlServer<FilmsContext>("Data Source= DESKTOP-VRL3HD3\\SQLEXPRESS2;Initial Catalog=FilmsDb;user id=sa;password=pass");
 
 builder.Services.AddScoped<IGenresServices, GenresServices>();
