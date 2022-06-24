@@ -12,7 +12,6 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddSqlServer<FilmsContext>("Data Source= DESKTOP-VRL3HD3\\SQLEXPRESS2;Initial Catalog=FilmsDb;user id=sa;password=pass");
 
-builder.Services.AddScoped<IDbCreatorService>(p=> new DbCreatorService());
 builder.Services.AddScoped<IGenresServices, GenresServices>();
 builder.Services.AddScoped<IFilmsServices, FilmsServices>();
 
