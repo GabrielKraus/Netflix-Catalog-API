@@ -11,8 +11,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<FilmsContext>(p => p.UseInMemoryDatabase("FilmsDB"));
-builder.Services.AddSqlServer<FilmsContext>("Data Source= DESKTOP-VRL3HD3\\SQLEXPRESS2;Initial Catalog=FilmsDb;user id=sa;password=pass");
+// builder.Services.AddDbContext<FilmsContext>(p => p.UseInMemoryDatabase("FilmsDB"));
+builder.Services.AddSqlServer<FilmsContext>("Data Source=FilmsDb-GabrielKraus.mssql.somee.com;Initial Catalog=FilmsDb-GabrielKraus;user id=GabrielKraus_SQLLogin_1;password=nzya6rmvul");
 
 builder.Services.AddScoped<IGenresServices, GenresServices>();
 builder.Services.AddScoped<IFilmsServices, FilmsServices>();
