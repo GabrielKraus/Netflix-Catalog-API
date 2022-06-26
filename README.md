@@ -5,4 +5,4 @@ https://netflix-film-api.herokuapp.com/api/genres
 
 https://netflix-film-api.herokuapp.com/api/films
 
-still working on database deploy, but api is 100% deployed
+still uploading data to make a complete catalog
