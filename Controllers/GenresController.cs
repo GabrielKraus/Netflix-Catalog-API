@@ -18,23 +18,4 @@ public class GenresController : ControllerBase
     {
         return Ok(genresServices.Get());
     }
-    [HttpPost]
-    public IActionResult Post([FromBody] Genres genre)
-    {
-        genresServices.Save(genre);
-        return Ok();
-    }
-    [HttpPut("{id}")]
-    public IActionResult Put(Guid id, [FromBody] Genres genre)
-    {
-        genresServices.Update(id, genre);
-        return Ok();
-    }
-
-    [HttpDelete("{id}")]
-    public IActionResult Delete(Guid id)
-    {
-        genresServices.Delete(id);
-        return Ok();
-    }
 }

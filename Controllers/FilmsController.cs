@@ -19,23 +19,4 @@ public class FilmsController : ControllerBase
     {
         return Ok(filmsService.Get());
     }
-    [HttpPost]
-    public IActionResult Post([FromBody] Films film)
-    {
-        filmsService.Save(film);
-        return Ok();
-    }
-    [HttpPut("{id}")]
-    public IActionResult Put(Guid id, [FromBody] Films film)
-    {
-        filmsService.Update(id, film);
-        return Ok();
-    }
-
-    [HttpDelete("{id}")]
-    public IActionResult Delete(Guid id)
-    {
-        filmsService.Delete(id);
-        return Ok();
-    }
 }
